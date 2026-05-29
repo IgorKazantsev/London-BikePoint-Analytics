@@ -1,0 +1,16 @@
+name: london_bikepoint
+version: "1.0"
+config-version: 2
+
+profile: london_bikepoint
+
+model-paths: ["models"]
+
+models:
+  london_bikepoint:
+    silver:
+      +schema: silver
+      +materialized: table
+    gold:
+      +schema: gold
+      +materialized: table

@@ -1,0 +1,844 @@
+[0m20:35:02.786401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d28939f0c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d28913b7c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d28911eded0>]}
+
+
+============================== 20:35:02.806577 | 76242032-bc5e-4cb9-a4c4-043443b4b87c ==============================
+[0m20:35:02.806577 [info ] [MainThread]: Running with dbt=1.8.3
+[0m20:35:02.811011 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/usr/app/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m20:35:03.437632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '76242032-bc5e-4cb9-a4c4-043443b4b87c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d28911246d0>]}
+[0m20:35:03.536435 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '76242032-bc5e-4cb9-a4c4-043443b4b87c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d288f936550>]}
+[0m20:35:03.542703 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m20:35:03.573207 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m20:35:03.585852 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:35:03.589828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '76242032-bc5e-4cb9-a4c4-043443b4b87c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2891817610>]}
+[0m20:35:06.093199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '76242032-bc5e-4cb9-a4c4-043443b4b87c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d288f770090>]}
+[0m20:35:06.345871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '76242032-bc5e-4cb9-a4c4-043443b4b87c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d288de0b290>]}
+[0m20:35:06.349074 [info ] [MainThread]: Found 2 models, 415 macros
+[0m20:35:06.352077 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '76242032-bc5e-4cb9-a4c4-043443b4b87c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d288f857ad0>]}
+[0m20:35:06.359691 [info ] [MainThread]: 
+[0m20:35:06.363855 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:35:06.373242 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bikepoint'
+[0m20:35:06.375371 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bikepoint'
+[0m20:35:06.650884 [debug] [ThreadPool]: Using postgres connection "list_bikepoint"
+[0m20:35:06.651629 [debug] [ThreadPool]: Using postgres connection "list_bikepoint"
+[0m20:35:06.654093 [debug] [ThreadPool]: On list_bikepoint: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "connection_name": "list_bikepoint"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:35:06.657335 [debug] [ThreadPool]: On list_bikepoint: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "connection_name": "list_bikepoint"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:35:06.660453 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:35:06.663596 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:35:04.713988 [debug] [ThreadPool]: SQL status: SELECT 5 in -2.0 seconds
+[0m20:35:04.714854 [debug] [ThreadPool]: SQL status: SELECT 5 in -2.0 seconds
+[0m20:35:04.718899 [debug] [ThreadPool]: On list_bikepoint: Close
+[0m20:35:04.723556 [debug] [ThreadPool]: On list_bikepoint: Close
+[0m20:35:04.729947 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_bikepoint, now create_bikepoint_public_gold)
+[0m20:35:04.730929 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_bikepoint, now create_bikepoint_public_silver)
+[0m20:35:04.734164 [debug] [ThreadPool]: Creating schema "database: "bikepoint"
+schema: "public_gold"
+"
+[0m20:35:04.737377 [debug] [ThreadPool]: Creating schema "database: "bikepoint"
+schema: "public_silver"
+"
+[0m20:35:06.830918 [debug] [ThreadPool]: Using postgres connection "create_bikepoint_public_gold"
+[0m20:35:06.836081 [debug] [ThreadPool]: Using postgres connection "create_bikepoint_public_silver"
+[0m20:35:06.839034 [debug] [ThreadPool]: On create_bikepoint_public_gold: BEGIN
+[0m20:35:06.841840 [debug] [ThreadPool]: On create_bikepoint_public_silver: BEGIN
+[0m20:35:06.844762 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:35:06.848534 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:35:06.865858 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m20:35:06.866757 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m20:35:06.868613 [debug] [ThreadPool]: Using postgres connection "create_bikepoint_public_silver"
+[0m20:35:06.871401 [debug] [ThreadPool]: Using postgres connection "create_bikepoint_public_gold"
+[0m20:35:06.873887 [debug] [ThreadPool]: On create_bikepoint_public_silver: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "connection_name": "create_bikepoint_public_silver"} */
+create schema if not exists "public_silver"
+[0m20:35:06.876499 [debug] [ThreadPool]: On create_bikepoint_public_gold: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "connection_name": "create_bikepoint_public_gold"} */
+create schema if not exists "public_gold"
+[0m20:35:06.884554 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.0 seconds
+[0m20:35:06.885090 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.0 seconds
+[0m20:35:06.887976 [debug] [ThreadPool]: On create_bikepoint_public_gold: COMMIT
+[0m20:35:06.891457 [debug] [ThreadPool]: On create_bikepoint_public_silver: COMMIT
+[0m20:35:06.894056 [debug] [ThreadPool]: Using postgres connection "create_bikepoint_public_gold"
+[0m20:35:06.896735 [debug] [ThreadPool]: Using postgres connection "create_bikepoint_public_silver"
+[0m20:35:06.899293 [debug] [ThreadPool]: On create_bikepoint_public_gold: COMMIT
+[0m20:35:06.902005 [debug] [ThreadPool]: On create_bikepoint_public_silver: COMMIT
+[0m20:35:06.907123 [debug] [ThreadPool]: SQL status: COMMIT in 0.0 seconds
+[0m20:35:06.909649 [debug] [ThreadPool]: SQL status: COMMIT in 0.0 seconds
+[0m20:35:06.910210 [debug] [ThreadPool]: On create_bikepoint_public_gold: Close
+[0m20:35:06.912909 [debug] [ThreadPool]: On create_bikepoint_public_silver: Close
+[0m20:35:06.923186 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_bikepoint_public_silver, now list_bikepoint_public_gold)
+[0m20:35:06.924785 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_bikepoint_public_gold, now list_bikepoint_public_silver)
+[0m20:35:06.932857 [debug] [ThreadPool]: Using postgres connection "list_bikepoint_public_gold"
+[0m20:35:06.936393 [debug] [ThreadPool]: Using postgres connection "list_bikepoint_public_silver"
+[0m20:35:06.939133 [debug] [ThreadPool]: On list_bikepoint_public_gold: BEGIN
+[0m20:35:06.941853 [debug] [ThreadPool]: On list_bikepoint_public_silver: BEGIN
+[0m20:35:06.944540 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:35:06.947362 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:35:06.959996 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m20:35:06.962915 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m20:35:06.963569 [debug] [ThreadPool]: Using postgres connection "list_bikepoint_public_gold"
+[0m20:35:06.966156 [debug] [ThreadPool]: Using postgres connection "list_bikepoint_public_silver"
+[0m20:35:06.968774 [debug] [ThreadPool]: On list_bikepoint_public_gold: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "connection_name": "list_bikepoint_public_gold"} */
+select
+      'bikepoint' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'bikepoint' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'bikepoint' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_gold'
+  
+[0m20:35:06.971903 [debug] [ThreadPool]: On list_bikepoint_public_silver: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "connection_name": "list_bikepoint_public_silver"} */
+select
+      'bikepoint' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'bikepoint' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'bikepoint' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_silver'
+  
+[0m20:35:07.002218 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m20:35:07.002907 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m20:35:07.005877 [debug] [ThreadPool]: On list_bikepoint_public_silver: ROLLBACK
+[0m20:35:07.009672 [debug] [ThreadPool]: On list_bikepoint_public_gold: ROLLBACK
+[0m20:35:07.012977 [debug] [ThreadPool]: On list_bikepoint_public_silver: Close
+[0m20:35:07.014977 [debug] [ThreadPool]: On list_bikepoint_public_gold: Close
+[0m20:35:07.024684 [debug] [MainThread]: Using postgres connection "master"
+[0m20:35:07.027164 [debug] [MainThread]: On master: BEGIN
+[0m20:35:07.029637 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:35:07.041511 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m20:35:07.044209 [debug] [MainThread]: Using postgres connection "master"
+[0m20:35:07.047139 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:35:07.084338 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m20:35:07.087991 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '76242032-bc5e-4cb9-a4c4-043443b4b87c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d288cb0e050>]}
+[0m20:35:07.091290 [debug] [MainThread]: On master: ROLLBACK
+[0m20:35:07.094616 [debug] [MainThread]: Using postgres connection "master"
+[0m20:35:07.097656 [debug] [MainThread]: On master: BEGIN
+[0m20:35:07.101245 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m20:35:07.104016 [debug] [MainThread]: On master: COMMIT
+[0m20:35:07.106813 [debug] [MainThread]: Using postgres connection "master"
+[0m20:35:07.109928 [debug] [MainThread]: On master: COMMIT
+[0m20:35:07.114187 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m20:35:07.117291 [debug] [MainThread]: On master: Close
+[0m20:35:07.120861 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:35:07.124796 [info ] [MainThread]: 
+[0m20:35:07.150989 [debug] [Thread-1 (]: Began running node model.london_bikepoint.silver_bikepoint_status
+[0m20:35:07.154688 [info ] [Thread-1 (]: 1 of 2 START sql table model public_silver.silver_bikepoint_status ............. [RUN]
+[0m20:35:07.158768 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_bikepoint_public_gold, now model.london_bikepoint.silver_bikepoint_status)
+[0m20:35:07.161823 [debug] [Thread-1 (]: Began compiling node model.london_bikepoint.silver_bikepoint_status
+[0m20:35:07.172799 [debug] [Thread-1 (]: Writing injected SQL for node "model.london_bikepoint.silver_bikepoint_status"
+[0m20:35:07.221183 [debug] [Thread-1 (]: Began executing node model.london_bikepoint.silver_bikepoint_status
+[0m20:35:07.282629 [debug] [Thread-1 (]: Writing runtime sql for node "model.london_bikepoint.silver_bikepoint_status"
+[0m20:35:07.329604 [debug] [Thread-1 (]: Using postgres connection "model.london_bikepoint.silver_bikepoint_status"
+[0m20:35:07.332041 [debug] [Thread-1 (]: On model.london_bikepoint.silver_bikepoint_status: BEGIN
+[0m20:35:07.334471 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:35:07.347089 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m20:35:07.349950 [debug] [Thread-1 (]: Using postgres connection "model.london_bikepoint.silver_bikepoint_status"
+[0m20:35:07.352499 [debug] [Thread-1 (]: On model.london_bikepoint.silver_bikepoint_status: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "node_id": "model.london_bikepoint.silver_bikepoint_status"} */
+
+  
+    
+
+  create  table "bikepoint"."public_silver"."silver_bikepoint_status__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with raw as (
+    select
+        id as raw_id,
+        snapshot_timestamp,
+        jsonb_array_elements(raw_json) as station
+    from bronze.bikepoint_raw
+),
+
+parsed as (
+    select
+        raw_id,
+        snapshot_timestamp,
+
+        station ->> 'id' as bikepoint_id,
+        station ->> 'commonName' as station_name,
+        station ->> 'placeType' as place_type,
+        (station ->> 'lat')::numeric as latitude,
+        (station ->> 'lon')::numeric as longitude,
+
+        (
+            select prop ->> 'value'
+            from jsonb_array_elements(station -> 'additionalProperties') prop
+            where lower(prop ->> 'key') = 'nbbikes'
+            limit 1
+        )::integer as nb_bikes,
+
+        (
+            select prop ->> 'value'
+            from jsonb_array_elements(station -> 'additionalProperties') prop
+            where lower(prop ->> 'key') = 'nbdocks'
+            limit 1
+        )::integer as nb_docks,
+
+        (
+            select prop ->> 'value'
+            from jsonb_array_elements(station -> 'additionalProperties') prop
+            where lower(prop ->> 'key') = 'nbspaces'
+            limit 1
+        )::integer as nb_spaces,
+
+        (
+            select prop ->> 'value'
+            from jsonb_array_elements(station -> 'additionalProperties') prop
+            where lower(prop ->> 'key') = 'nbemptydocks'
+            limit 1
+        )::integer as nb_empty_docks,
+
+        (
+            select prop ->> 'value'
+            from jsonb_array_elements(station -> 'additionalProperties') prop
+            where lower(prop ->> 'key') = 'nbstandardbikes'
+            limit 1
+        )::integer as nb_standard_bikes,
+
+        (
+            select prop ->> 'value'
+            from jsonb_array_elements(station -> 'additionalProperties') prop
+            where lower(prop ->> 'key') = 'nbebikes'
+            limit 1
+        )::integer as nb_ebikes
+
+    from raw
+)
+
+select *
+from parsed
+  );
+  
+[0m20:35:08.518849 [debug] [Thread-1 (]: SQL status: SELECT 797 in 1.0 seconds
+[0m20:35:08.529507 [debug] [Thread-1 (]: Using postgres connection "model.london_bikepoint.silver_bikepoint_status"
+[0m20:35:08.532122 [debug] [Thread-1 (]: On model.london_bikepoint.silver_bikepoint_status: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "node_id": "model.london_bikepoint.silver_bikepoint_status"} */
+alter table "bikepoint"."public_silver"."silver_bikepoint_status__dbt_tmp" rename to "silver_bikepoint_status"
+[0m20:35:08.535623 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:35:08.561575 [debug] [Thread-1 (]: On model.london_bikepoint.silver_bikepoint_status: COMMIT
+[0m20:35:08.564125 [debug] [Thread-1 (]: Using postgres connection "model.london_bikepoint.silver_bikepoint_status"
+[0m20:35:08.566660 [debug] [Thread-1 (]: On model.london_bikepoint.silver_bikepoint_status: COMMIT
+[0m20:35:08.571771 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m20:35:08.582199 [debug] [Thread-1 (]: Applying DROP to: "bikepoint"."public_silver"."silver_bikepoint_status__dbt_backup"
+[0m20:35:08.591197 [debug] [Thread-1 (]: Using postgres connection "model.london_bikepoint.silver_bikepoint_status"
+[0m20:35:08.593758 [debug] [Thread-1 (]: On model.london_bikepoint.silver_bikepoint_status: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "node_id": "model.london_bikepoint.silver_bikepoint_status"} */
+drop table if exists "bikepoint"."public_silver"."silver_bikepoint_status__dbt_backup" cascade
+[0m20:35:08.597729 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m20:35:08.602883 [debug] [Thread-1 (]: On model.london_bikepoint.silver_bikepoint_status: Close
+[0m20:35:08.607825 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '76242032-bc5e-4cb9-a4c4-043443b4b87c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d288cc8e0d0>]}
+[0m20:35:08.612143 [info ] [Thread-1 (]: 1 of 2 OK created sql table model public_silver.silver_bikepoint_status ........ [[32mSELECT 797[0m in 1.45s]
+[0m20:35:08.616724 [debug] [Thread-1 (]: Finished running node model.london_bikepoint.silver_bikepoint_status
+[0m20:35:08.621776 [debug] [Thread-3 (]: Began running node model.london_bikepoint.gold_station_latest
+[0m20:35:08.624805 [info ] [Thread-3 (]: 2 of 2 START sql table model public_gold.gold_station_latest ................... [RUN]
+[0m20:35:08.629918 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.london_bikepoint.gold_station_latest'
+[0m20:35:08.633436 [debug] [Thread-3 (]: Began compiling node model.london_bikepoint.gold_station_latest
+[0m20:35:08.646377 [debug] [Thread-3 (]: Writing injected SQL for node "model.london_bikepoint.gold_station_latest"
+[0m20:35:08.684964 [debug] [Thread-3 (]: Began executing node model.london_bikepoint.gold_station_latest
+[0m20:35:08.693031 [debug] [Thread-3 (]: Writing runtime sql for node "model.london_bikepoint.gold_station_latest"
+[0m20:35:08.725717 [debug] [Thread-3 (]: Using postgres connection "model.london_bikepoint.gold_station_latest"
+[0m20:35:08.728539 [debug] [Thread-3 (]: On model.london_bikepoint.gold_station_latest: BEGIN
+[0m20:35:08.731264 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:35:08.743915 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m20:35:08.746643 [debug] [Thread-3 (]: Using postgres connection "model.london_bikepoint.gold_station_latest"
+[0m20:35:08.749523 [debug] [Thread-3 (]: On model.london_bikepoint.gold_station_latest: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "node_id": "model.london_bikepoint.gold_station_latest"} */
+
+  
+    
+
+  create  table "bikepoint"."public_gold"."gold_station_latest__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with ranked as (
+    select
+        *,
+        row_number() over (
+            partition by bikepoint_id
+            order by snapshot_timestamp desc
+        ) as rn
+    from "bikepoint"."public_silver"."silver_bikepoint_status"
+),
+
+latest as (
+    select
+        bikepoint_id,
+        station_name,
+        snapshot_timestamp,
+        latitude,
+        longitude,
+        nb_bikes,
+        nb_docks,
+        nb_spaces,
+        nb_empty_docks,
+        nb_standard_bikes,
+        nb_ebikes,
+
+        case
+            when nb_spaces > 0 then round((nb_bikes::numeric / nb_spaces) * 100, 2)
+            else null
+        end as utilization_percent,
+
+        case
+            when nb_bikes < 3 then true
+            else false
+        end as is_high_risk
+
+    from ranked
+    where rn = 1
+)
+
+select *
+from latest
+  );
+  
+[0m20:35:08.771743 [debug] [Thread-3 (]: SQL status: SELECT 797 in 0.0 seconds
+[0m20:35:08.778749 [debug] [Thread-3 (]: Using postgres connection "model.london_bikepoint.gold_station_latest"
+[0m20:35:08.781601 [debug] [Thread-3 (]: On model.london_bikepoint.gold_station_latest: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "node_id": "model.london_bikepoint.gold_station_latest"} */
+alter table "bikepoint"."public_gold"."gold_station_latest__dbt_tmp" rename to "gold_station_latest"
+[0m20:35:08.785026 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:35:08.789710 [debug] [Thread-3 (]: On model.london_bikepoint.gold_station_latest: COMMIT
+[0m20:35:08.792243 [debug] [Thread-3 (]: Using postgres connection "model.london_bikepoint.gold_station_latest"
+[0m20:35:08.794822 [debug] [Thread-3 (]: On model.london_bikepoint.gold_station_latest: COMMIT
+[0m20:35:08.799391 [debug] [Thread-3 (]: SQL status: COMMIT in 0.0 seconds
+[0m20:35:08.804781 [debug] [Thread-3 (]: Applying DROP to: "bikepoint"."public_gold"."gold_station_latest__dbt_backup"
+[0m20:35:08.808138 [debug] [Thread-3 (]: Using postgres connection "model.london_bikepoint.gold_station_latest"
+[0m20:35:08.811127 [debug] [Thread-3 (]: On model.london_bikepoint.gold_station_latest: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "node_id": "model.london_bikepoint.gold_station_latest"} */
+drop table if exists "bikepoint"."public_gold"."gold_station_latest__dbt_backup" cascade
+[0m20:35:08.814525 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m20:35:08.818703 [debug] [Thread-3 (]: On model.london_bikepoint.gold_station_latest: Close
+[0m20:35:08.821673 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '76242032-bc5e-4cb9-a4c4-043443b4b87c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d288c9f8090>]}
+[0m20:35:08.824975 [info ] [Thread-3 (]: 2 of 2 OK created sql table model public_gold.gold_station_latest .............. [[32mSELECT 797[0m in 0.19s]
+[0m20:35:08.828488 [debug] [Thread-3 (]: Finished running node model.london_bikepoint.gold_station_latest
+[0m20:35:08.834213 [debug] [MainThread]: Using postgres connection "master"
+[0m20:35:08.838620 [debug] [MainThread]: On master: BEGIN
+[0m20:35:08.841231 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:35:08.855133 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m20:35:08.863975 [debug] [MainThread]: On master: COMMIT
+[0m20:35:08.868061 [debug] [MainThread]: Using postgres connection "master"
+[0m20:35:08.870267 [debug] [MainThread]: On master: COMMIT
+[0m20:35:08.873183 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m20:35:08.875757 [debug] [MainThread]: On master: Close
+[0m20:35:08.878853 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:35:08.881715 [debug] [MainThread]: Connection 'model.london_bikepoint.silver_bikepoint_status' was properly closed.
+[0m20:35:08.884285 [debug] [MainThread]: Connection 'list_bikepoint_public_silver' was properly closed.
+[0m20:35:08.887099 [debug] [MainThread]: Connection 'model.london_bikepoint.gold_station_latest' was properly closed.
+[0m20:35:08.890580 [info ] [MainThread]: 
+[0m20:35:08.893791 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 2.53 seconds (2.53s).
+[0m20:35:08.898915 [debug] [MainThread]: Command end result
+[0m20:35:08.979932 [info ] [MainThread]: 
+[0m20:35:08.982900 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:35:08.985853 [info ] [MainThread]: 
+[0m20:35:08.988718 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m20:35:08.994836 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 6.395532, "process_user_time": 6.029243, "process_kernel_time": 1.592084, "process_mem_max_rss": "113040", "process_in_blocks": "111536", "process_out_blocks": "200"}
+[0m20:35:08.997937 [debug] [MainThread]: Command `dbt run` succeeded at 20:35:08.997631 after 6.40 seconds
+[0m20:35:09.000759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2891f07150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d28912436d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d2894fd85d0>]}
+[0m20:35:09.003418 [debug] [MainThread]: Flushing usage events
+[0m20:38:46.140221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x723e0b266c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x723e0b2acf90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x723e0b2643d0>]}
+
+
+============================== 20:38:46.147994 | 63827e98-40fe-48e8-a5e7-0d0829b6ade7 ==============================
+[0m20:38:46.147994 [info ] [MainThread]: Running with dbt=1.8.3
+[0m20:38:46.151169 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/usr/app/logs', 'version_check': 'True', 'profiles_dir': '/root/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:38:46.405237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '63827e98-40fe-48e8-a5e7-0d0829b6ade7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x723e09abbe10>]}
+[0m20:38:46.482194 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '63827e98-40fe-48e8-a5e7-0d0829b6ade7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x723e0ef688d0>]}
+[0m20:38:46.486845 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m20:38:46.510676 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m20:38:46.777300 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:38:46.779491 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:38:46.807544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '63827e98-40fe-48e8-a5e7-0d0829b6ade7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x723e09879850>]}
+[0m20:38:46.942783 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '63827e98-40fe-48e8-a5e7-0d0829b6ade7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x723e097afd50>]}
+[0m20:38:46.944686 [info ] [MainThread]: Found 2 models, 415 macros
+[0m20:38:46.947450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '63827e98-40fe-48e8-a5e7-0d0829b6ade7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x723e09ab9b90>]}
+[0m20:38:46.951848 [info ] [MainThread]: 
+[0m20:38:46.954762 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:38:46.961291 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bikepoint'
+[0m20:38:46.963298 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bikepoint'
+[0m20:38:47.057004 [debug] [ThreadPool]: Using postgres connection "list_bikepoint"
+[0m20:38:47.057496 [debug] [ThreadPool]: Using postgres connection "list_bikepoint"
+[0m20:38:47.059342 [debug] [ThreadPool]: On list_bikepoint: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "connection_name": "list_bikepoint"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:38:47.061972 [debug] [ThreadPool]: On list_bikepoint: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "connection_name": "list_bikepoint"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:38:47.064139 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:38:47.066397 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:38:47.108014 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.0 seconds
+[0m20:38:47.108527 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.0 seconds
+[0m20:38:47.111660 [debug] [ThreadPool]: On list_bikepoint: Close
+[0m20:38:47.115637 [debug] [ThreadPool]: On list_bikepoint: Close
+[0m20:38:47.122710 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_bikepoint, now list_bikepoint_public_silver)
+[0m20:38:47.124043 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_bikepoint, now list_bikepoint_public_gold)
+[0m20:38:47.132828 [debug] [ThreadPool]: Using postgres connection "list_bikepoint_public_silver"
+[0m20:38:47.136672 [debug] [ThreadPool]: Using postgres connection "list_bikepoint_public_gold"
+[0m20:38:47.139182 [debug] [ThreadPool]: On list_bikepoint_public_silver: BEGIN
+[0m20:38:47.142066 [debug] [ThreadPool]: On list_bikepoint_public_gold: BEGIN
+[0m20:38:47.144801 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:38:47.147506 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:38:47.159590 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m20:38:47.161529 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m20:38:47.162681 [debug] [ThreadPool]: Using postgres connection "list_bikepoint_public_silver"
+[0m20:38:47.165286 [debug] [ThreadPool]: Using postgres connection "list_bikepoint_public_gold"
+[0m20:38:47.168428 [debug] [ThreadPool]: On list_bikepoint_public_silver: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "connection_name": "list_bikepoint_public_silver"} */
+select
+      'bikepoint' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'bikepoint' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'bikepoint' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_silver'
+  
+[0m20:38:47.171131 [debug] [ThreadPool]: On list_bikepoint_public_gold: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "connection_name": "list_bikepoint_public_gold"} */
+select
+      'bikepoint' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'bikepoint' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'bikepoint' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_gold'
+  
+[0m20:38:47.192110 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m20:38:47.192580 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m20:38:47.195628 [debug] [ThreadPool]: On list_bikepoint_public_silver: ROLLBACK
+[0m20:38:47.199485 [debug] [ThreadPool]: On list_bikepoint_public_gold: ROLLBACK
+[0m20:38:47.202510 [debug] [ThreadPool]: On list_bikepoint_public_silver: Close
+[0m20:38:47.204611 [debug] [ThreadPool]: On list_bikepoint_public_gold: Close
+[0m20:38:47.216309 [debug] [MainThread]: Using postgres connection "master"
+[0m20:38:47.218891 [debug] [MainThread]: On master: BEGIN
+[0m20:38:47.221392 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:38:47.234003 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m20:38:47.236323 [debug] [MainThread]: Using postgres connection "master"
+[0m20:38:47.238969 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:38:47.265315 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m20:38:47.268222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '63827e98-40fe-48e8-a5e7-0d0829b6ade7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x723e099e5710>]}
+[0m20:38:47.270512 [debug] [MainThread]: On master: ROLLBACK
+[0m20:38:47.273101 [debug] [MainThread]: Using postgres connection "master"
+[0m20:38:47.275124 [debug] [MainThread]: On master: BEGIN
+[0m20:38:47.277899 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m20:38:47.280035 [debug] [MainThread]: On master: COMMIT
+[0m20:38:47.283009 [debug] [MainThread]: Using postgres connection "master"
+[0m20:38:47.285178 [debug] [MainThread]: On master: COMMIT
+[0m20:38:47.287561 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m20:38:47.289767 [debug] [MainThread]: On master: Close
+[0m20:38:47.292282 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:38:47.295400 [info ] [MainThread]: 
+[0m20:38:47.303296 [debug] [Thread-1 (]: Began running node model.london_bikepoint.silver_bikepoint_status
+[0m20:38:47.306012 [info ] [Thread-1 (]: 1 of 2 START sql table model public_silver.silver_bikepoint_status ............. [RUN]
+[0m20:38:47.308682 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_bikepoint_public_gold, now model.london_bikepoint.silver_bikepoint_status)
+[0m20:38:47.311762 [debug] [Thread-1 (]: Began compiling node model.london_bikepoint.silver_bikepoint_status
+[0m20:38:47.324398 [debug] [Thread-1 (]: Writing injected SQL for node "model.london_bikepoint.silver_bikepoint_status"
+[0m20:38:47.343216 [debug] [Thread-1 (]: Began executing node model.london_bikepoint.silver_bikepoint_status
+[0m20:38:47.387371 [debug] [Thread-1 (]: Writing runtime sql for node "model.london_bikepoint.silver_bikepoint_status"
+[0m20:38:47.406027 [debug] [Thread-1 (]: Using postgres connection "model.london_bikepoint.silver_bikepoint_status"
+[0m20:38:47.408429 [debug] [Thread-1 (]: On model.london_bikepoint.silver_bikepoint_status: BEGIN
+[0m20:38:47.410628 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:38:47.420168 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m20:38:47.422459 [debug] [Thread-1 (]: Using postgres connection "model.london_bikepoint.silver_bikepoint_status"
+[0m20:38:47.424579 [debug] [Thread-1 (]: On model.london_bikepoint.silver_bikepoint_status: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "node_id": "model.london_bikepoint.silver_bikepoint_status"} */
+
+  
+    
+
+  create  table "bikepoint"."public_silver"."silver_bikepoint_status__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with raw as (
+    select
+        id as raw_id,
+        snapshot_timestamp,
+        jsonb_array_elements(raw_json) as station
+    from bronze.bikepoint_raw
+),
+
+parsed as (
+    select
+        raw_id,
+        snapshot_timestamp,
+
+        station ->> 'id' as bikepoint_id,
+        station ->> 'commonName' as station_name,
+        station ->> 'placeType' as place_type,
+        (station ->> 'lat')::numeric as latitude,
+        (station ->> 'lon')::numeric as longitude,
+
+        (
+            select prop ->> 'value'
+            from jsonb_array_elements(station -> 'additionalProperties') prop
+            where lower(prop ->> 'key') = 'nbbikes'
+            limit 1
+        )::integer as nb_bikes,
+
+        (
+            select prop ->> 'value'
+            from jsonb_array_elements(station -> 'additionalProperties') prop
+            where lower(prop ->> 'key') = 'nbdocks'
+            limit 1
+        )::integer as nb_docks,
+
+        (
+            select prop ->> 'value'
+            from jsonb_array_elements(station -> 'additionalProperties') prop
+            where lower(prop ->> 'key') = 'nbspaces'
+            limit 1
+        )::integer as nb_spaces,
+
+        (
+            select prop ->> 'value'
+            from jsonb_array_elements(station -> 'additionalProperties') prop
+            where lower(prop ->> 'key') = 'nbemptydocks'
+            limit 1
+        )::integer as nb_empty_docks,
+
+        (
+            select prop ->> 'value'
+            from jsonb_array_elements(station -> 'additionalProperties') prop
+            where lower(prop ->> 'key') = 'nbstandardbikes'
+            limit 1
+        )::integer as nb_standard_bikes,
+
+        (
+            select prop ->> 'value'
+            from jsonb_array_elements(station -> 'additionalProperties') prop
+            where lower(prop ->> 'key') = 'nbebikes'
+            limit 1
+        )::integer as nb_ebikes
+
+    from raw
+)
+
+select *
+from parsed
+  );
+  
+[0m20:38:48.554999 [debug] [Thread-1 (]: SQL status: SELECT 1594 in 1.0 seconds
+[0m20:38:48.562938 [debug] [Thread-1 (]: Using postgres connection "model.london_bikepoint.silver_bikepoint_status"
+[0m20:38:48.565164 [debug] [Thread-1 (]: On model.london_bikepoint.silver_bikepoint_status: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "node_id": "model.london_bikepoint.silver_bikepoint_status"} */
+alter table "bikepoint"."public_silver"."silver_bikepoint_status" rename to "silver_bikepoint_status__dbt_backup"
+[0m20:38:48.568738 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:38:48.574203 [debug] [Thread-1 (]: Using postgres connection "model.london_bikepoint.silver_bikepoint_status"
+[0m20:38:48.576655 [debug] [Thread-1 (]: On model.london_bikepoint.silver_bikepoint_status: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "node_id": "model.london_bikepoint.silver_bikepoint_status"} */
+alter table "bikepoint"."public_silver"."silver_bikepoint_status__dbt_tmp" rename to "silver_bikepoint_status"
+[0m20:38:48.579526 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:38:48.609273 [debug] [Thread-1 (]: On model.london_bikepoint.silver_bikepoint_status: COMMIT
+[0m20:38:48.611389 [debug] [Thread-1 (]: Using postgres connection "model.london_bikepoint.silver_bikepoint_status"
+[0m20:38:48.613479 [debug] [Thread-1 (]: On model.london_bikepoint.silver_bikepoint_status: COMMIT
+[0m20:38:48.618435 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m20:38:48.626528 [debug] [Thread-1 (]: Applying DROP to: "bikepoint"."public_silver"."silver_bikepoint_status__dbt_backup"
+[0m20:38:48.633614 [debug] [Thread-1 (]: Using postgres connection "model.london_bikepoint.silver_bikepoint_status"
+[0m20:38:48.635839 [debug] [Thread-1 (]: On model.london_bikepoint.silver_bikepoint_status: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "node_id": "model.london_bikepoint.silver_bikepoint_status"} */
+drop table if exists "bikepoint"."public_silver"."silver_bikepoint_status__dbt_backup" cascade
+[0m20:38:48.647665 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m20:38:48.651792 [debug] [Thread-1 (]: On model.london_bikepoint.silver_bikepoint_status: Close
+[0m20:38:48.655391 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '63827e98-40fe-48e8-a5e7-0d0829b6ade7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x723e0bed0a50>]}
+[0m20:38:48.658005 [info ] [Thread-1 (]: 1 of 2 OK created sql table model public_silver.silver_bikepoint_status ........ [[32mSELECT 1594[0m in 1.35s]
+[0m20:38:48.661330 [debug] [Thread-1 (]: Finished running node model.london_bikepoint.silver_bikepoint_status
+[0m20:38:48.664818 [debug] [Thread-3 (]: Began running node model.london_bikepoint.gold_station_latest
+[0m20:38:48.667866 [info ] [Thread-3 (]: 2 of 2 START sql table model public_gold.gold_station_latest ................... [RUN]
+[0m20:38:48.671086 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.london_bikepoint.gold_station_latest'
+[0m20:38:48.673328 [debug] [Thread-3 (]: Began compiling node model.london_bikepoint.gold_station_latest
+[0m20:38:48.679262 [debug] [Thread-3 (]: Writing injected SQL for node "model.london_bikepoint.gold_station_latest"
+[0m20:38:48.699557 [debug] [Thread-3 (]: Began executing node model.london_bikepoint.gold_station_latest
+[0m20:38:48.705951 [debug] [Thread-3 (]: Writing runtime sql for node "model.london_bikepoint.gold_station_latest"
+[0m20:38:48.724170 [debug] [Thread-3 (]: Using postgres connection "model.london_bikepoint.gold_station_latest"
+[0m20:38:48.726164 [debug] [Thread-3 (]: On model.london_bikepoint.gold_station_latest: BEGIN
+[0m20:38:48.728120 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:38:48.738886 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m20:38:48.741101 [debug] [Thread-3 (]: Using postgres connection "model.london_bikepoint.gold_station_latest"
+[0m20:38:48.743435 [debug] [Thread-3 (]: On model.london_bikepoint.gold_station_latest: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "node_id": "model.london_bikepoint.gold_station_latest"} */
+
+  
+    
+
+  create  table "bikepoint"."public_gold"."gold_station_latest__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with ranked as (
+    select
+        *,
+        row_number() over (
+            partition by bikepoint_id
+            order by snapshot_timestamp desc
+        ) as rn
+    from "bikepoint"."public_silver"."silver_bikepoint_status"
+),
+
+latest as (
+    select
+        bikepoint_id,
+        station_name,
+        snapshot_timestamp,
+        latitude,
+        longitude,
+        nb_bikes,
+        nb_docks,
+        nb_spaces,
+        nb_empty_docks,
+        nb_standard_bikes,
+        nb_ebikes,
+
+        case
+            when nb_spaces > 0 then round((nb_bikes::numeric / nb_spaces) * 100, 2)
+            else null
+        end as utilization_percent,
+
+        case
+            when nb_bikes < 3 then true
+            else false
+        end as is_high_risk
+
+    from ranked
+    where rn = 1
+)
+
+select *
+from latest
+  );
+  
+[0m20:38:48.762877 [debug] [Thread-3 (]: SQL status: SELECT 797 in 0.0 seconds
+[0m20:38:48.767989 [debug] [Thread-3 (]: Using postgres connection "model.london_bikepoint.gold_station_latest"
+[0m20:38:48.770245 [debug] [Thread-3 (]: On model.london_bikepoint.gold_station_latest: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "node_id": "model.london_bikepoint.gold_station_latest"} */
+alter table "bikepoint"."public_gold"."gold_station_latest" rename to "gold_station_latest__dbt_backup"
+[0m20:38:48.772926 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:38:48.778442 [debug] [Thread-3 (]: Using postgres connection "model.london_bikepoint.gold_station_latest"
+[0m20:38:48.780450 [debug] [Thread-3 (]: On model.london_bikepoint.gold_station_latest: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "node_id": "model.london_bikepoint.gold_station_latest"} */
+alter table "bikepoint"."public_gold"."gold_station_latest__dbt_tmp" rename to "gold_station_latest"
+[0m20:38:48.783058 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m20:38:48.786951 [debug] [Thread-3 (]: On model.london_bikepoint.gold_station_latest: COMMIT
+[0m20:38:48.789051 [debug] [Thread-3 (]: Using postgres connection "model.london_bikepoint.gold_station_latest"
+[0m20:38:48.791113 [debug] [Thread-3 (]: On model.london_bikepoint.gold_station_latest: COMMIT
+[0m20:38:48.795038 [debug] [Thread-3 (]: SQL status: COMMIT in 0.0 seconds
+[0m20:38:48.799465 [debug] [Thread-3 (]: Applying DROP to: "bikepoint"."public_gold"."gold_station_latest__dbt_backup"
+[0m20:38:48.802363 [debug] [Thread-3 (]: Using postgres connection "model.london_bikepoint.gold_station_latest"
+[0m20:38:48.804786 [debug] [Thread-3 (]: On model.london_bikepoint.gold_station_latest: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "london_bikepoint", "target_name": "dev", "node_id": "model.london_bikepoint.gold_station_latest"} */
+drop table if exists "bikepoint"."public_gold"."gold_station_latest__dbt_backup" cascade
+[0m20:38:48.810885 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m20:38:48.814672 [debug] [Thread-3 (]: On model.london_bikepoint.gold_station_latest: Close
+[0m20:38:48.817507 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '63827e98-40fe-48e8-a5e7-0d0829b6ade7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x723e0839bf90>]}
+[0m20:38:48.820405 [info ] [Thread-3 (]: 2 of 2 OK created sql table model public_gold.gold_station_latest .............. [[32mSELECT 797[0m in 0.15s]
+[0m20:38:48.823696 [debug] [Thread-3 (]: Finished running node model.london_bikepoint.gold_station_latest
+[0m20:38:48.828259 [debug] [MainThread]: Using postgres connection "master"
+[0m20:38:48.830436 [debug] [MainThread]: On master: BEGIN
+[0m20:38:48.832537 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:38:48.843178 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m20:38:48.845484 [debug] [MainThread]: On master: COMMIT
+[0m20:38:48.848258 [debug] [MainThread]: Using postgres connection "master"
+[0m20:38:48.850945 [debug] [MainThread]: On master: COMMIT
+[0m20:38:48.854346 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m20:38:48.857039 [debug] [MainThread]: On master: Close
+[0m20:38:48.859361 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:38:48.861448 [debug] [MainThread]: Connection 'list_bikepoint_public_silver' was properly closed.
+[0m20:38:48.863804 [debug] [MainThread]: Connection 'model.london_bikepoint.silver_bikepoint_status' was properly closed.
+[0m20:38:48.865918 [debug] [MainThread]: Connection 'model.london_bikepoint.gold_station_latest' was properly closed.
+[0m20:38:48.868118 [info ] [MainThread]: 
+[0m20:38:48.870677 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 1.91 seconds (1.91s).
+[0m20:38:48.873574 [debug] [MainThread]: Command end result
+[0m20:38:48.942510 [info ] [MainThread]: 
+[0m20:38:48.944678 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:38:48.947057 [info ] [MainThread]: 
+[0m20:38:48.949953 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m20:38:48.954497 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.895232, "process_user_time": 2.47058, "process_kernel_time": 0.506167, "process_mem_max_rss": "111132", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:38:48.957082 [debug] [MainThread]: Command `dbt run` succeeded at 20:38:48.956926 after 2.90 seconds
+[0m20:38:48.959635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x723e0b2b8250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x723e0f365750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x723e0b4276d0>]}
+[0m20:38:48.962073 [debug] [MainThread]: Flushing usage events

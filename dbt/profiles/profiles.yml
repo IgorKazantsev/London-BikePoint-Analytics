@@ -1,0 +1,12 @@
+london_bikepoint:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres
+      user: bikepoint
+      password: bikepoint
+      port: 5432
+      dbname: bikepoint
+      schema: public
+      threads: 4

@@ -1,0 +1,1 @@
+{"_invocation_id": "63827e98-40fe-48e8-a5e7-0d0829b6ade7", "linked": {"0": {"name": "model.london_bikepoint.gold_station_latest", "type": "model"}, "1": {"name": "model.london_bikepoint.silver_bikepoint_status", "type": "model", "succ": [0]}}}

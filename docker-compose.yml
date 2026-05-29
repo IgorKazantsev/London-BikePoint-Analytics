@@ -1,0 +1,60 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: london_bikepoint_postgres
+    environment:
+      POSTGRES_USER: bikepoint
+      POSTGRES_PASSWORD: bikepoint
+      POSTGRES_DB: bikepoint
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  superset:
+    image: apache/superset:latest
+    container_name: london_bikepoint_superset
+    environment:
+      SUPERSET_SECRET_KEY: "dev_secret_key"
+    ports:
+      - "8088:8088"
+    depends_on:
+      - postgres
+    volumes:
+      - superset_home:/app/superset_home
+
+  airflow:  # ← Added missing service name
+    image: apache/airflow:2.9.3-python3.11
+    container_name: london_bikepoint_airflow
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__WEBSERVER__SECRET_KEY: "dev_secret_key"
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/airflow.db
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts
+      - ./dbt/london_bikepoint:/opt/airflow/dbt/london_bikepoint
+      - airflow_home:/opt/airflow
+    command: >
+      bash -c "
+      airflow standalone
+      "
+
+  dbt:
+    image: ghcr.io/dbt-labs/dbt-postgres:1.8.2
+    container_name: london_bikepoint_dbt
+    depends_on:
+      - postgres
+    volumes:
+      - ./dbt/london_bikepoint:/usr/app
+      - ./dbt/profiles:/root/.dbt
+    working_dir: /usr/app
+    entrypoint: ["tail", "-f", "/dev/null"]
+    
+volumes:
+  postgres_data:
+  superset_home:
+  airflow_home:
