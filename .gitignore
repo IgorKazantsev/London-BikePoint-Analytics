@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+
+airflow/logs/
+dbt/london_bikepoint/logs/
+dbt/london_bikepoint/target/
