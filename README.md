@@ -161,6 +161,35 @@ Kõik testid käivitatakse automaatselt Airflow DAG-is.
 
 ---
 
+## Superset Dashboardi Importimine
+
+Superseti dashboardid salvestatakse Superseti metabaasi ning neid ei taastata automaatselt pärast uue keskkonna käivitamist.
+
+Seetõttu on projekti juurde lisatud dashboardi ekspordifail:
+
+```text
+superset/london_bikepoint_dashboard.zip
+```
+
+Dashboardi importimiseks:
+
+1. Käivita projekt Docker Compose abil.
+2. Ava Apache Superset.
+3. Vali **Dashboards → Import Dashboard**.
+4. Impordi fail `london_bikepoint_dashboard.zip`.
+
+Dashboard sisaldab järgmisi visualiseeringuid:
+
+- Current Bike Availability Map
+- Top 10 Stations by Bike Demand per Hour (Last 24 Hours)
+
+Dashboard kasutab järgmisi andmestikke:
+
+- `public_gold.gold_station_latest`
+- `public_gold.gold_station_depletion_rate`
+
+---
+
 ## Dashboard
 
 ### Current Bike Availability Map
@@ -180,24 +209,49 @@ See aitab tuvastada kõrge nõudlusega piirkonnad.
 
 ---
 
+## Turvalisuse Märkused
+
+Projekt on loodud õppeeesmärgil ning töötab täielikult lokaalses Docker keskkonnas.
+
+PostgreSQL, Airflow ja Superset kasutajanimed ning paroolid on määratud otse failis `docker-compose.yml`.
+
+See otsus tehti teadlikult, et lihtsustada projekti käivitamist, testimist ja reprodutseeritavust õppekeskkonnas.
+
+Projekt ei sisalda tootmiskeskkonna paroole, API võtmeid, isikuandmeid ega muud tundlikku informatsiooni.
+
+Tootmiskeskkonnas oleks soovitatav hoida kõik autentimisandmed `.env` failides või kasutada spetsiaalset secrets management lahendust.
+
+---
+
 ## Projekti struktuur
 
 ```text
 .
 ├── airflow/
-│   ├── dags/
-│   └── scripts/
+│   └── dags/
+│       └── bikepoint_pipeline.py
 │
 ├── dbt/
 │   └── london_bikepoint/
 │       ├── models/
-│       └── tests/
+│       │   ├── silver/
+│       │   └── gold/
+│       ├── tests/
+│       ├── profiles/
+│       └── dbt_project.yml
 │
-├── sql/
+├── docs/
+│   └── arhitektuur.md
 │
-├── docker/
+├── scripts/
+│   └── ingest_bikepoints_raw.py
+│
+├── superset/
+│   └── dashboard_export_*.zip
 │
 ├── docker-compose.yml
+├── Dockerfile.airflow
+├── Dockerfile.superset
 ├── README.md
 └── .gitignore
 ```
